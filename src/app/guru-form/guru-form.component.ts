@@ -13,4 +13,9 @@ export class GuruFormComponent implements OnInit {
     ngOnInit() {
     }
 
+    model = new Guru(18, 'Sampath', 'Mtech', 'UOH');
+
+    newGuru() {
+        this.model = new Guru(42, '', '', '');
+    }
 }
