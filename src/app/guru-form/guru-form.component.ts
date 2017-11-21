@@ -18,4 +18,8 @@ export class GuruFormComponent implements OnInit {
     newGuru() {
         this.model = new Guru(42, '', '', '');
     }
+
+    submitted = false;
+
+    onSubmit() { this.submitted = true; }
 }
