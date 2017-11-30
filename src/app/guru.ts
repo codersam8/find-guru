@@ -1,4 +1,4 @@
-export class Guru {
+export class Tutor {
 
     constructor(
         public id: number,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Guru } from '../guru';
+import { Tutor } from '../guru';
+import { TutorService } from '../tutor.service';
 
 @Component({
     selector: 'app-guru-form',
@@ -8,12 +9,12 @@ import { Guru } from '../guru';
 })
 export class GuruFormComponent implements OnInit {
 
-    constructor() { }
+    constructor(private tutorService: TutorService) { }
 
     ngOnInit() {
     }
 
-    model = new Guru(18,
+    model = new Tutor(18,
          'Sampath',
           'Surineni',
            'sampath@suri.com',
@@ -23,10 +24,16 @@ export class GuruFormComponent implements OnInit {
             'UOH');
 
     newGuru() {
-        this.model = new Guru(42, '', '', '',  0, '', '', '');
+        this.model = new Tutor(42, '', '', '',  0, '', '', '');
     }
 
     submitted = false;
 
-    onSubmit() { this.submitted = true; }
+    onSubmit() { 
+        this.submitted = true;
+
+        console.log(JSON.stringify(this.model));
+
+        this.tutorService.addTutor();
+     }
 }
