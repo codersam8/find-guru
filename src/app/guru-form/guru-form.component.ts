@@ -13,10 +13,17 @@ export class GuruFormComponent implements OnInit {
     ngOnInit() {
     }
 
-    model = new Guru(18, 'Sampath', 'Mtech', 'UOH');
+    model = new Guru(18,
+         'Sampath',
+          'Surineni',
+           'sampath@suri.com',
+           1234567890,
+           'hyderabad',
+           'Mtech',
+            'UOH');
 
     newGuru() {
-        this.model = new Guru(42, '', '', '');
+        this.model = new Guru(42, '', '', '',  0, '', '', '');
     }
 
     submitted = false;
