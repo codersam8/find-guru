@@ -15,25 +15,25 @@ export class GuruFormComponent implements OnInit {
     }
 
     model = new Tutor(18,
-         'Sampath',
-          'Surineni',
-           'sampath@suri.com',
-           1234567890,
-           'hyderabad',
-           'Mtech',
-            'UOH');
+        'Sampath',
+        'Surineni',
+        'sampath@suri.com',
+        1234567890,
+        'hyderabad',
+        'Mtech',
+        'UOH');
 
     newGuru() {
-        this.model = new Tutor(42, '', '', '',  0, '', '', '');
+        this.model = new Tutor(42, '', '', '', 0, '', '', '');
     }
 
     submitted = false;
 
-    onSubmit() { 
+    onSubmit() {
         this.submitted = true;
 
         console.log(JSON.stringify(this.model));
 
-        this.tutorService.addTutor();
-     }
+        this.tutorService.addTutor(this.model);
+    }
 }
