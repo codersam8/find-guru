@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { Tutor } from './guru';
+import { Tutor } from './tutor';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -15,7 +15,7 @@ export class TutorService {
 
     addTutor(aTutor): Observable<Tutor> {
         console.log('Tried to call backend');
-        console.log(aTutor);
+        console.log(JSON.stringify(aTutor));
         var ret_val: any;
         ret_val = null;
 
@@ -24,7 +24,7 @@ export class TutorService {
         //     catchError(this.handleError('addTutor', null))
         //     ).subscribe(some_op => ret_val = some_op);
 
-        this.http.post(this.addTutorUrl, aTutor).subscribe(data => {
+        this.http.post(this.addTutorUrl, JSON.stringify(aTutor)).subscribe(data => {
             console.log('inside request');
             // console.log(data)
         }, err => {

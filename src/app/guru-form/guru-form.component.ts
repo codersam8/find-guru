@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Tutor } from '../guru';
+import { Tutor } from '../tutor';
 import { TutorService } from '../tutor.service';
 
 @Component({
-    selector: 'app-guru-form',
-    templateUrl: './guru-form.component.html',
-    styleUrls: ['./guru-form.component.css']
+    selector: 'app-tutor-form',
+    templateUrl: './tutor-form.component.html',
+    styleUrls: ['./tutor-form.component.css']
 })
 export class GuruFormComponent implements OnInit {
 
