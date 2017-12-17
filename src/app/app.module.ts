@@ -4,14 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { GuruFormComponent } from './guru-form/guru-form.component';
+import { TutorFormComponent } from './tutor-form/tutor-form.component';
 import { HttpClient } from 'selenium-webdriver/http';
 import { TutorService } from './tutor.service';
 
 @NgModule({
     declarations: [
         AppComponent,
-        GuruFormComponent
+        TutorFormComponent
     ],
     imports: [
         BrowserModule,

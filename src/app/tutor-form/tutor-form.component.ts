@@ -7,7 +7,7 @@ import { TutorService } from '../tutor.service';
     templateUrl: './tutor-form.component.html',
     styleUrls: ['./tutor-form.component.css']
 })
-export class GuruFormComponent implements OnInit {
+export class TutorFormComponent implements OnInit {
 
     constructor(private tutorService: TutorService) { }
 
