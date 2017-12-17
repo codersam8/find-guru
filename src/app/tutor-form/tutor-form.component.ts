@@ -15,13 +15,13 @@ export class TutorFormComponent implements OnInit {
     }
 
     model = new Tutor(18,
-        'Sampath',
-        'Surineni',
-        'sampath@suri.com',
-        1234567890,
-        'hyderabad',
-        'Mtech',
-        'UOH');
+        '',
+        '',
+        '',
+        null,
+        '',
+        '',
+        '');
 
     newGuru() {
         this.model = new Tutor(42, '', '', '', 0, '', '', '');

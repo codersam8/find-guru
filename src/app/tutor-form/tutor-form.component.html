@@ -10,7 +10,8 @@
                        required
                        [(ngModel)]="model.firstName"
                        name="first_name"
-                       #name="ngModel">
+                       #name="ngModel"
+                       placeholder="Ex: John">
                 <div [hidden]="name.valid || name.pristine"
                      class="alert alert-danger">
                     Name is required
@@ -23,7 +24,8 @@
                        required
                        [(ngModel)]="model.lastName"
                        name="last_name"
-                       #name="ngModel">
+                       #name="ngModel"
+                       placeholder="Ex: Hancock">
                 <div [hidden]="name.valid || name.pristine"
                      class="alert alert-danger">
                     Name is required
@@ -36,7 +38,8 @@
                        required
                        [(ngModel)]="model.mailId"
                        name="mailId"
-                       #name="ngModel">
+                       #name="ngModel"
+                       placeholder="Ex: john.hancock@gmail.com">
                 <div [hidden]="name.valid || name.pristine"
                      class="alert alert-danger">
                     Name is required
@@ -49,7 +52,8 @@
                        required
                        [(ngModel)]="model.mobile"
                        name="mobile"
-                       #name="ngModel">
+                       #name="ngModel"
+                       placeholder="Ex: 9876543210">
                 <div [hidden]="name.valid || name.pristine"
                      class="alert alert-danger">
                     Name is required
@@ -61,8 +65,9 @@
                 <input type="text" class="form-control" id="location"
                        required
                        [(ngModel)]="model.location"
-                       name="location"
-                       #name="ngModel">
+                       name="Location"
+                       #name="ngModel"
+                       placeholder="Ex: Delhi">
                 <div [hidden]="name.valid || name.pristine"
                      class="alert alert-danger">
                     Name is required
