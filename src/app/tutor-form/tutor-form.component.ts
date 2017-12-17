@@ -27,6 +27,10 @@ export class TutorFormComponent implements OnInit {
         this.model = new Tutor(42, '', '', '', 0, '', '', '');
     }
 
+    qualifications = ['B.Tech',
+        'M.Tech',
+        'Phd'];
+
     submitted = false;
 
     onSubmit() {

@@ -76,12 +76,17 @@
 
             <div class="form-group">
                 <label for="qualification">Qualification</label>
-                <input type="text"
-                       class="form-control"
-                       id="qualification"
-                       name="qualification"
-                       [(ngModel)]="model.qualification"
-                       required>
+                <select type="text"
+                        class="form-control"
+                        id="qualification"
+                        name="qualification"
+                        [(ngModel)]="model.qualification"
+                        required>
+                    <option value="">---Please select---</option>
+                    <option value="btech">B.Tech</option>
+                    <option value="mtech">M.Tech</option>
+                    <option value="phd">Phd</option>
+                </select>
             </div>
 
             <div class="form-group">
