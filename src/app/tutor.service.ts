@@ -10,6 +10,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class TutorService {
 
     private addTutorUrl = 'http://localhost:8000/add_tutor';
+    private searchTutorsUrl = 'http://localhost:8000/search_tutors?location=';
 
     constructor(private http: HttpClient) { }
 
@@ -36,8 +37,19 @@ export class TutorService {
         return ret_val;
     }
 
+    searchTutors(term: string): Observable<string[]> {
+        if (!term.trim()) {
+            return of([]);
+        }
+
+        return this.http.get<string[]>(`${this.searchTutorsUrl}${term}`).pipe(
+            tap(_ => console.log('success response from server')),
+            catchError(this.handleError<string[]>('searchTutors', []))
+        );
+    }
+
     private handleError<T>(operation = 'operation', result?: T) {
-        return (error: any): Observable<Tutor> => {
+        return (error: any): Observable<T> => {
 
             // TODO: send the error to remote logging infrastructure
             console.error(error); // log to console instead
@@ -47,7 +59,7 @@ export class TutorService {
 
             // Let the app keep running by returning an empty result.
             // return of(result as T);
-            return null;
+            return of(result as T);
         };
     }
 

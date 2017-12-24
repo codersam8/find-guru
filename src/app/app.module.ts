@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { TutorFormComponent } from './tutor-form/tutor-form.component';
 import { HttpClient } from 'selenium-webdriver/http';
 import { TutorService } from './tutor.service';
+import { TutorSearchComponent } from './tutor-search/tutor-search.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        TutorFormComponent
+        TutorFormComponent,
+        TutorSearchComponent
     ],
     imports: [
         BrowserModule,
