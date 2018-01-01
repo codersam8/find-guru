@@ -8,6 +8,7 @@ import { TutorFormComponent } from './tutor-form/tutor-form.component';
 import { HttpClient } from 'selenium-webdriver/http';
 import { TutorService } from './tutor.service';
 import { TutorSearchComponent } from './tutor-search/tutor-search.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { TutorSearchComponent } from './tutor-search/tutor-search.component';
     imports: [
         BrowserModule,
         FormsModule,
-        HttpClientModule
+        HttpClientModule,
+        AppRoutingModule
     ],
     providers: [TutorService],
     bootstrap: [AppComponent]
