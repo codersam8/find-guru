@@ -17,7 +17,7 @@ import { TutorService } from '../tutor.service';
 export class TutorSearchComponent implements OnInit {
     tutors$: Observable<string[]>;
     private searchTerms = new Subject<string>();
-
+    locations = [];
     constructor(private tutorService: TutorService) { }
 
     search(term: string): void {

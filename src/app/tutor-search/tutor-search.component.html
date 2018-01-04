@@ -1,8 +1,15 @@
 <div id="search-component">
     <h4>Tutor Search</h4>
     
-    <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
-    
+    <input type="text" list="locations"
+           #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+    <datalist id="locations">
+        <option *ngFor="let tutor of tutors$ | async">{{ tutor }} </option>
+    </datalist>
+    <select ng-model="selectedLocation"
+            (keyup)="search(searchBox.value)"
+            ng-options="loc for loc in tutor">
+    </select>
     <ul class="search-result">
         <li *ngFor="let tutor of tutors$ | async" >
             <!-- <a routerLink="/detail/{{tutor.id}}">
