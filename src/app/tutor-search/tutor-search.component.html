@@ -6,16 +6,4 @@
     <datalist id="locations">
         <option *ngFor="let tutor of tutors$ | async">{{ tutor }} </option>
     </datalist>
-    <select ng-model="selectedLocation"
-            (keyup)="search(searchBox.value)"
-            ng-options="loc for loc in tutor">
-    </select>
-    <ul class="search-result">
-        <li *ngFor="let tutor of tutors$ | async" >
-            <!-- <a routerLink="/detail/{{tutor.id}}">
-                 {{tutor.name}}
-                 </a> -->
-            <span>{{tutor}}</span>
-        </li>
-    </ul>
 </div>
