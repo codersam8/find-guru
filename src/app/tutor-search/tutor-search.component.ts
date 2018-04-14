@@ -22,6 +22,15 @@ export class TutorSearchComponent implements OnInit {
 
     search(term: string): void {
         this.searchTerms.next(term);
+        var tutString;
+        this.tutors$.subscribe(function(event) {
+            tutString = event;
+            console.log('term is ' + term);
+            console.log('tutors ' + tutString);
+            if (term === tutString[0]) {
+                alert('Bingo');
+            }
+        });
     }
 
     ngOnInit() {

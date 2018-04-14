@@ -41,9 +41,7 @@ export class TutorService {
         if (!term.trim()) {
             return of([]);
         }
-
         return this.http.get<string[]>(`${this.searchTutorsUrl}${term}`).pipe(
-            tap(_ => console.log('success response from server')),
             catchError(this.handleError<string[]>('searchTutors', []))
         );
     }
